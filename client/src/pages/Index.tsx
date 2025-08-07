@@ -9,36 +9,36 @@ import Footer from '@/components/layout/Footer';
 const features = [
   {
     icon: <BookOpen className="w-6 h-6 text-primary" />,
-    title: 'Comprehensive Courses',
-    description: 'Access a wide range of courses designed to meet your learning goals.'
+    title: 'Diplomatic Training Modules',
+    description: 'Three core training modules: Sustainable Development & Environmental Diplomacy, Peacebuilding & Conflict Resolution, and Economic & Regional Integration.'
   },
   {
     icon: <Users className="w-6 h-6 text-primary" />,
-    title: 'Expert Instructors',
-    description: 'Learn from industry professionals with years of experience.'
+    title: 'Expert Diplomatic Faculty',
+    description: 'Learn from seasoned diplomats, ambassadors, and foreign service professionals with real-world experience.'
   },
   {
     icon: <Award className="w-6 h-6 text-primary" />,
-    title: 'Earn Certificates',
-    description: 'Receive certificates upon course completion to showcase your skills.'
+    title: 'Professional Certification',
+    description: 'Receive official FSA certificates for diplomatic competency and career advancement in Kenya\'s foreign service.'
   }
 ];
 
 const testimonials = [
   {
-    quote: "This learning platform has transformed the way I approach education. The courses are well-structured and easy to follow.",
-    name: "Sarah J.",
-    title: "UX Designer"
+    quote: "The FSA online platform has revolutionized my diplomatic training. The video modules and interactive content make complex international relations concepts accessible from anywhere.",
+    name: "Ambassador Peter K.",
+    title: "Kenyan High Commissioner"
   },
   {
-    quote: "I've completed three courses so far, and the quality of instruction is consistently excellent. Highly recommended!",
-    name: "Michael T.",
-    title: "Software Developer"
+    quote: "As a Third Secretary Cadet, the three core training modules prepared me comprehensively for my posting. The climate diplomacy and conflict resolution segments were particularly valuable.",
+    name: "Grace M.",
+    title: "Third Secretary Cadet"
   },
   {
-    quote: "The interface is intuitive and the progress tracking keeps me motivated. I can learn at my own pace.",
-    name: "Emily R.",
-    title: "Marketing Specialist"
+    quote: "The flexibility of the online platform allows me to continue professional development while stationed abroad. Essential for career progression in Kenya's foreign service.",
+    name: "James O.",
+    title: "First Secretary, Embassy of Kenya"
   }
 ];
 
@@ -115,15 +115,15 @@ const Index = () => {
                 }`}
               >
                 <span className="inline-block px-3 py-1 mb-6 text-xs font-medium text-primary bg-primary/10 rounded-full">
-                  Welcome to Learner
+                  Foreign Services Academy Kenya
                 </span>
                 
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-balance text-foreground">
-                  Elevate your learning experience
+                  Professional Diplomatic Training & Development
                 </h1>
                 
                 <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  A modern, lightweight learning platform designed to help you master new skills efficiently and effectively.
+                  Comprehensive online training platform for Kenya's diplomatic corps, offering three core modules in sustainable development, peacebuilding, and economic diplomacy with flexible video-based learning.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -131,7 +131,7 @@ const Index = () => {
                     to="/courses"
                     className="px-6 py-3 text-primary-foreground bg-primary hover:bg-primary/90 rounded-lg transition-colors flex items-center justify-center gap-2"
                   >
-                    <span>Explore courses</span>
+                    <span>Access Training Modules</span>
                     <ArrowRight size={16} />
                   </Link>
                   
@@ -139,7 +139,7 @@ const Index = () => {
                     to="/register"
                     className="px-6 py-3 text-foreground bg-card border border-input hover:bg-accent rounded-lg transition-colors"
                   >
-                    Create account
+                    Register as Diplomat
                   </Link>
                 </div>
               </div>
@@ -153,10 +153,10 @@ const Index = () => {
             <FadeInSection>
               <div className="max-w-3xl mx-auto text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-                  Everything you need to succeed
+                  Excellence in Diplomatic Training
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Our platform combines powerful features with an intuitive interface, making learning enjoyable and effective.
+                  FSA's comprehensive learning platform provides professional development for Kenya's foreign service officers at all career levels.
                 </p>
               </div>
             </FadeInSection>

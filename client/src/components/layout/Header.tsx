@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useAuthStore } from '@/store/authStore';
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
 import { toast } from 'sonner';
+import fsaLogo from '@/assets/fsa-logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,10 +63,16 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <span className="text-xl font-bold text-gray-900 dark:text-white">
-              Learner
-            </span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={fsaLogo} alt="FSA Logo" className="h-10 w-10 md:h-12 md:w-12" />
+            <div className="flex flex-col">
+              <span className="text-sm md:text-base font-bold text-gray-900 dark:text-white leading-tight">
+                Foreign Services Academy
+              </span>
+              <span className="text-xs text-primary font-medium">
+                Kenya
+              </span>
+            </div>
             {isAdmin() && <Shield className="h-4 w-4 ml-1 text-primary" />}
           </Link>
 

@@ -5,6 +5,7 @@ import { useCourseStore, type Course } from '@/store/courseStore';
 import CourseCard from '@/components/ui/CourseCard';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import LearningPathSelector from '@/components/course/LearningPathSelector';
 
 const levelFilters = ['All Levels', 'Beginner', 'Intermediate', 'Advanced'];
 
@@ -13,6 +14,7 @@ const Courses = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedLevel, setSelectedLevel] = useState('All Levels');
   const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
+  const [showLearningPaths, setShowLearningPaths] = useState(true);
   
   useEffect(() => {
     fetchCourses();
@@ -51,12 +53,24 @@ const Courses = () => {
           {/* Page Header */}
           <div className="text-center mb-12 max-w-3xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Explore Our Courses
+              FSA Diplomatic Training Modules
             </h1>
             <p className="text-lg text-muted-foreground">
-              Discover a wide range of courses designed to help you master new skills and advance your career.
+              Professional development courses designed for Kenya's foreign service officers across three specialized training levels.
             </p>
           </div>
+
+          {/* Learning Path Selector */}
+          {showLearningPaths && (
+            <div className="mb-12">
+              <LearningPathSelector 
+                onPathSelect={(pathId) => {
+                  console.log('Selected learning path:', pathId);
+                  setShowLearningPaths(false);
+                }} 
+              />
+            </div>
+          )}
           
           {/* Search and Filters */}
           <div className="mb-10">

@@ -5,78 +5,78 @@ import PageLayout from '@/components/layout/PageLayout';
 
 const About = () => {
   const stats = [
-    { value: '10k+', label: 'Students' },
-    { value: '500+', label: 'Courses' },
-    { value: '100+', label: 'Instructors' },
-    { value: '15+', label: 'Countries' },
+    { value: '100+', label: 'Diplomats Trained Annually' },
+    { value: '3', label: 'Core Training Pillars' },
+    { value: '18+', label: 'Years of Excellence' },
+    { value: '95%', label: 'Certification Rate' },
   ];
 
   const values = [
     {
       icon: <Users className="h-6 w-6 text-primary" />,
-      title: 'Community First',
-      description: 'We believe in the power of community and collaboration to drive innovation and growth.',
+      title: 'Diplomatic Excellence',
+      description: 'We foster professional excellence through comprehensive training that strengthens Kenya\'s diplomatic capabilities.',
     },
     {
       icon: <BookOpen className="h-6 w-6 text-primary" />,
-      title: 'Quality Education',
-      description: 'We are committed to providing high-quality educational content that is accessible to everyone.',
+      title: '21st Century Diplomacy',
+      description: 'Our curriculum addresses contemporary challenges in sustainable development, peacebuilding, and economic integration.',
     },
     {
       icon: <Award className="h-6 w-6 text-primary" />,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, from our platform to our courses and customer service.',
+      title: 'Global Leadership',
+      description: 'We prepare Kenya\'s diplomats to lead in multilateral forums and advance national interests globally.',
     },
     {
       icon: <Heart className="h-6 w-6 text-primary" />,
-      title: 'Passion',
-      description: 'We are passionate about education and helping our students achieve their goals and dreams.',
+      title: 'Service to Nation',
+      description: 'We instill values of patriotism and public service in Kenya\'s diplomatic corps.',
     },
   ];
 
   const team = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO & Co-Founder',
+      name: 'Ambassador Paul K. Ndung\'u',
+      role: 'Acting Director General',
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+    },
+    {
+      name: 'Ambassador Dr. Maria Wanjiku',
+      role: 'Lead Instructor - Environmental Diplomacy',
       image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO & Co-Founder',
+      name: 'Ambassador Prof. James Macharia',
+      role: 'Lead Instructor - Peacebuilding',
       image: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Head of Education',
+      name: 'Ambassador Dr. Grace Akumu',
+      role: 'Lead Instructor - Economic Diplomacy',
       image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
-    },
-    {
-      name: 'Daniel Kim',
-      role: 'Product Lead',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
     },
   ];
 
   return (
     <PageLayout 
-      title="About Learner" 
-      description="Our mission is to provide accessible, high-quality education to everyone, everywhere."
+      title="About Foreign Services Academy Kenya" 
+      description="Strengthening Kenya's diplomatic capabilities through comprehensive professional training and development programs."
     >
       {/* Story Section */}
       <div className="max-w-3xl mx-auto mb-16">
-        <h2 className="text-2xl font-bold mb-6">Our Story</h2>
+        <h2 className="text-2xl font-bold mb-6">Our History</h2>
         <div className="space-y-4 text-muted-foreground">
           <p>
-            Founded in 2020, Learner was born out of a simple idea: that quality education should be accessible to everyone, regardless of their background or location.
+            Established in 2006 under the Ministry of Foreign and Diaspora Affairs, the Foreign Services Academy (FSA) was created to strengthen Kenya's diplomatic capabilities and prepare foreign service officers for 21st-century challenges.
           </p>
           <p>
-            Our founders, Sarah and Michael, met at a technology conference where they discovered their shared passion for education and technology. They realized that despite the digital revolution, education remained inaccessible to many around the world.
+            Under the leadership of Acting Director General Ambassador Paul K. Ndung'u, FSA has evolved from a traditional diplomatic training institute to a comprehensive digital learning platform, serving Kenya's growing diplomatic corps and regional training needs.
           </p>
           <p>
-            With this in mind, they set out to create a platform that would break down the barriers to education. Starting with just a handful of courses and a small team, Learner has grown into a global community of learners and educators committed to transforming lives through education.
+            The Academy recently unveiled its transformative curriculum focusing on three critical pillars: Sustainable Development & Environmental Diplomacy, Peacebuilding & Conflict Resolution, and Economic & Regional Integration Diplomacy.
           </p>
           <p>
-            Today, Learner offers hundreds of courses across various disciplines, from programming and design to business and personal development. Our platform is used by students from over 15 countries, and we're just getting started.
+            Today, FSA trains over 100 officers annually across various specialized programs, from Third Secretary Cadets to Ambassadors and Consuls-General, utilizing innovative digital methodologies including video-based learning and virtual diplomatic simulations.
           </p>
         </div>
       </div>
