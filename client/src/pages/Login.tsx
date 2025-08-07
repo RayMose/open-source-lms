@@ -13,8 +13,8 @@ const Login = () => {
         <div className="w-full max-w-md">
           <div className="bg-card rounded-xl shadow-sm border border-border p-8">
             <div className="text-center mb-8">
-              <h1 className="text-2xl font-bold text-foreground">Welcome back</h1>
-              <p className="text-muted-foreground mt-2">Log in to your Learner account</p>
+              <h1 className="text-2xl font-bold text-foreground">FSA Learning Portal</h1>
+              <p className="text-muted-foreground mt-2">Access your Foreign Services Academy training modules</p>
             </div>
             
             <LoginForm />
@@ -28,10 +28,13 @@ const Login = () => {
               </p>
             </div>
             
-            <div className="mt-4 text-center border-t border-border pt-4">
-              <p className="text-xs text-muted-foreground mb-1">Demo credentials:</p>
-              <p className="text-xs text-muted-foreground">User: user@example.com / password</p>
-              <p className="text-xs text-muted-foreground">Admin: admin@example.com / admin123</p>
+            <div className="mt-4 text-center border-t border-border pt-4 space-y-1">
+              <p className="text-xs text-muted-foreground mb-2 font-medium">FSA Demo Access:</p>
+              <p className="text-xs text-muted-foreground">Diplomat: diplomat@fsa.go.ke / diplomat123</p>
+              <p className="text-xs text-muted-foreground">Lecturer: lecturer@fsa.go.ke / lecturer123</p>
+              <p className="text-xs text-muted-foreground">HR: hr@fsa.go.ke / hr123</p>
+              <p className="text-xs text-muted-foreground">Management: management@fsa.go.ke / management123</p>
+              <p className="text-xs text-muted-foreground">Admin: admin@fsa.go.ke / admin123</p>
             </div>
           </div>
         </div>

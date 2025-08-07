@@ -8,9 +8,13 @@ import CourseCard from '@/components/ui/CourseCard';
 import ProgressBar from '@/components/ui/ProgressBar';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import LecturerDashboard from '@/pages/dashboards/LecturerDashboard';
+import HRDashboard from '@/pages/dashboards/HRDashboard';
+import ManagementDashboard from '@/pages/dashboards/ManagementDashboard';
+import DiplomatDashboard from '@/pages/dashboards/DiplomatDashboard';
 
 const Dashboard = () => {
-  const { user, isAuthenticated } = useAuthStore();
+  const { user, isAuthenticated, isLecturer, isHR, isManagement, isAdmin } = useAuthStore();
   const { courses, progress, fetchCourses, isLoading } = useCourseStore();
   const [inProgressCourses, setInProgressCourses] = useState<Course[]>([]);
   const navigate = useNavigate();
@@ -20,6 +24,63 @@ const Dashboard = () => {
       navigate('/login');
     }
   }, [isAuthenticated, navigate]);
+
+  // Route to role-specific dashboards
+  if (user?.role === 'diplomat') {
+    return (
+      <div className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <main className="flex-grow pt-20 pb-12">
+          <div className="container mx-auto px-4 md:px-6 animate-fade-in">
+            <DiplomatDashboard />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (isLecturer()) {
+    return (
+      <div className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <main className="flex-grow pt-20 pb-12">
+          <div className="container mx-auto px-4 md:px-6 animate-fade-in">
+            <LecturerDashboard />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (isHR()) {
+    return (
+      <div className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <main className="flex-grow pt-20 pb-12">
+          <div className="container mx-auto px-4 md:px-6 animate-fade-in">
+            <HRDashboard />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (isManagement() || isAdmin()) {
+    return (
+      <div className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <main className="flex-grow pt-20 pb-12">
+          <div className="container mx-auto px-4 md:px-6 animate-fade-in">
+            <ManagementDashboard />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
   
   useEffect(() => {
     fetchCourses();
@@ -66,8 +127,11 @@ const Dashboard = () => {
               Welcome back, {user?.name}
             </h1>
             <p className="text-muted-foreground">
-              Track your progress and continue learning where you left off.
+              Continue your diplomatic training and track your progress through FSA's specialized programs.
             </p>
+            {user?.department && (
+              <p className="text-sm text-primary mt-2">{user.department} • {user.level}</p>
+            )}
           </div>
           
           {/* Stats Cards */}

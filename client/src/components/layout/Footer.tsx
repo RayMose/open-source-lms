@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
+import fsaLogo from '@/assets/fsa-logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,68 +10,84 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="relative w-8 h-8 bg-primary rounded-lg flex items-center justify-center overflow-hidden">
-                <span className="text-primary-foreground font-semibold text-lg">L</span>
+            <Link to="/" className="flex items-center gap-3">
+              <img src={fsaLogo} alt="FSA Logo" className="h-8 w-8" />
+              <div className="flex flex-col">
+                <span className="font-bold text-sm text-foreground leading-tight">Foreign Services Academy</span>
+                <span className="text-xs text-primary font-medium">Kenya</span>
               </div>
-              <span className="font-medium text-xl text-foreground">Learner</span>
             </Link>
             
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-              A lightweight, modular learning management system designed with simplicity and elegance in mind.
+              Strengthening Kenya's diplomatic capabilities through comprehensive professional training and development since 2006.
             </p>
           </div>
           
           <div className="md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-sm font-semibold text-foreground mb-3">Platform</h3>
+              <h3 className="text-sm font-semibold text-foreground mb-3">Training Programs</h3>
               <ul className="space-y-2">
                 <li>
                   <Link to="/courses" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Browse Courses
+                    Diplomatic Modules
                   </Link>
                 </li>
                 <li>
                   <Link to="/dashboard" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Dashboard
+                    Training Dashboard
                   </Link>
                 </li>
                 <li>
-                  <Link to="/pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Pricing
-                  </Link>
+                  <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Certification Tracking
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Video Learning
+                  </a>
                 </li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-sm font-semibold text-foreground mb-3">Company</h3>
+              <h3 className="text-sm font-semibold text-foreground mb-3">Academy</h3>
               <ul className="space-y-2">
                 <li>
                   <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    About us
+                    About FSA
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Contact
-                  </Link>
+                  <a href="https://www.fsa.go.ke" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Official Website
+                  </a>
                 </li>
                 <li>
-                  <Link to="/careers" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Careers
-                  </Link>
+                  <a href="https://mfa.go.ke" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Ministry of Foreign Affairs
+                  </a>
                 </li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-sm font-semibold text-foreground mb-3">Legal</h3>
+              <h3 className="text-sm font-semibold text-foreground mb-3">Support</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Terms of Service
-                  </Link>
+                  <a href="mailto:info@fsa.go.ke" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Technical Support
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+254-20-2221221" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Contact FSA
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Training Guidelines
+                  </a>
                 </li>
                 <li>
                   <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -89,10 +106,8 @@ const Footer = () => {
         
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-muted-foreground">
-            <p>© {currentYear} Learner. All rights reserved.</p>
-            <p className="mt-1">
-              Designed by <a href="https://ariellephoenix.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline transition-all">Arielle Phoenix</a>
-            </p>
+            <p>© {currentYear} Foreign Services Academy Kenya. All rights reserved.</p>
+            <p className="mt-1">Ministry of Foreign and Diaspora Affairs | Government of Kenya</p>
           </div>
           
           <div className="flex items-center gap-6 mt-4 md:mt-0">
