@@ -3,11 +3,15 @@
 This is the Foreign Services Academy (FSA) Kenya Learning Management System - a specialized diplomatic training platform built with React, Express.js, and PostgreSQL. The application provides comprehensive online training for Kenya's foreign service officers with three-tier diplomatic education structure, video-based learning modules, and professional certification tracking.
 
 ## Recent Changes (January 2025)
+- **Canvas LMS Layout Integration**: Complete restructure to mirror Canvas LMS layout with left sidebar navigation, main content area, and right sidebar components
 - **FSA Branding Integration**: Complete rebranding with official FSA logo, colors, and diplomatic academy theme
+- **Role-Based Dashboard System**: Implemented specialized dashboards for all 5 user types (Diplomat, Lecturer, HR, Management, Admin) with tailored functionality
+- **Canvas-Style Navigation**: Left sidebar navigation menu with collapsible design, course-centric layout, and module-based content organization
 - **Three-Tier Training Structure**: Implemented specialized learning paths for Third Secretary Cadets, Pre-departure Officers, and Ambassadors/Consuls-General
-- **Diplomatic Course Content**: Created three core training modules: Sustainable Development & Environmental Diplomacy, Peacebuilding & Conflict Resolution, and Economic & Regional Integration Diplomacy
+- **Module-Centric Design**: Canvas-inspired course structure with modules, assignments, discussions, and gradebook tabs
+- **Diplomatic Course Content**: Created three core training modules with Canvas-style presentation and progress tracking
 - **Video Learning Platform**: Added advanced video player component with speed controls, progress tracking, and full-screen support for long-form diplomatic training content
-- **Learning Path Selector**: Interactive component to guide users through FSA's structured training progression
+- **Right Sidebar Components**: To-do lists, recent feedback, learning streaks, and announcements in Canvas style
 
 # User Preferences
 
@@ -17,12 +21,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Frontend Architecture
 - **React 18** with TypeScript for the user interface
+- **Canvas LMS Layout Pattern**: Left sidebar navigation, main content area, and right sidebar components
 - **Vite** as the build tool and development server with hot module replacement
-- **React Router** for client-side routing and navigation
+- **React Router** for client-side routing and navigation with Canvas-style URL structure
 - **Zustand** for state management (authentication, courses, progress tracking)
 - **TanStack Query** for server state management and data fetching
 - **Tailwind CSS** with shadcn/ui components for consistent styling
 - **Theme system** supporting light/dark modes with CSS custom properties
+- **Canvas Layout Components**: CanvasLayout, ModuleView, CourseCard, and RightSidebar for authentic LMS experience
 
 ## Backend Architecture
 - **Express.js** server with TypeScript for API endpoints

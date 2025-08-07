@@ -19,6 +19,9 @@ import AdminStudents from "./pages/admin/AdminStudents";
 import AdminSales from "./pages/admin/AdminSales";
 import AdminAnalytics from "./pages/admin/AdminAnalytics";
 import AdminSettings from "./pages/admin/AdminSettings";
+import CanvasLayout from "./components/layout/CanvasLayout";
+import CanvasDashboard from "./pages/canvas/CanvasDashboard";
+import CoursePage from "./pages/canvas/CoursePage";
 import NotFound from "./pages/NotFound";
 import Pricing from "./pages/Pricing";
 import About from "./pages/About";
@@ -83,9 +86,13 @@ const App = () => (
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/cookies" element={<Cookies />} />
             
-            {/* User protected routes */}
-            <Route path="/dashboard" element={<UserRoute><Dashboard /></UserRoute>} />
-            <Route path="/profile" element={<UserRoute><Profile /></UserRoute>} />
+            {/* User protected routes - Canvas Style */}
+            <Route path="/dashboard" element={<UserRoute><CanvasLayout><CanvasDashboard /></CanvasLayout></UserRoute>} />
+            <Route path="/courses/:courseId" element={<UserRoute><CanvasLayout><CoursePage /></CanvasLayout></UserRoute>} />
+            <Route path="/profile" element={<UserRoute><CanvasLayout><Profile /></CanvasLayout></UserRoute>} />
+            
+            {/* Legacy routes for compatibility */}
+            <Route path="/old-dashboard" element={<UserRoute><Dashboard /></UserRoute>} />
             
             {/* Admin protected routes */}
             <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
