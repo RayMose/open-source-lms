@@ -32,9 +32,9 @@ const AdminSidebar = () => {
       <div className="p-4 border-b border-sidebar-border">
         <Link to="/" className="flex items-center space-x-2">
           <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold">ED</span>
+            <span className="text-primary-foreground font-bold">FSA</span>
           </div>
-          <span className="text-lg font-bold">Learner</span>
+          <span className="text-lg font-bold">FSA Academy</span>
           <Shield className="h-4 w-4 text-primary" />
         </Link>
       </div>
