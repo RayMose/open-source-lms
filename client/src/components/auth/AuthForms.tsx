@@ -32,19 +32,9 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
         return;
       }
       
-      // Use demo credentials for easy testing
-      if (email !== 'user@example.com' || password !== 'password') {
-        toast({
-          title: "Demo Credentials",
-          description: "Use user@example.com / password to log in",
-          variant: "default",
-        });
-        return;
-      }
-      
       toast({
         title: "Login successful",
-        description: "Welcome back to Learner!",
+        description: "Welcome back to FSA Learning Portal!",
         variant: "default",
       });
       
