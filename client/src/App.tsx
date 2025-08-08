@@ -35,13 +35,13 @@ const queryClient = new QueryClient();
 
 // Protected route component for admin routes
 const AdminRoute = ({ children }: { children: React.ReactNode }) => {
-  const { isAuthenticated, isAdmin } = useAuthStore();
+  const { isAuthenticated, isAdmin, isHR, isManagement } = useAuthStore();
   
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
   
-  if (!isAdmin()) {
+  if (!isAdmin() && !isHR() && !isManagement()) {
     return <Navigate to="/dashboard" replace />;
   }
   
@@ -50,14 +50,14 @@ const AdminRoute = ({ children }: { children: React.ReactNode }) => {
 
 // Protected route component for user routes
 const UserRoute = ({ children }: { children: React.ReactNode }) => {
-  const { isAuthenticated, isAdmin } = useAuthStore();
+  const { isAuthenticated, isAdmin, isHR, isManagement } = useAuthStore();
   
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
   
-  // Redirect admins to admin dashboard
-  if (isAdmin()) {
+  // Redirect admin, HR, and management users to admin dashboard
+  if (isAdmin() || isHR() || isManagement()) {
     return <Navigate to="/admin" replace />;
   }
   

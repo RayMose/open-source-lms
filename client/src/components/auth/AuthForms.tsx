@@ -11,7 +11,7 @@ type LoginFormProps = {
 export const LoginForm = ({ onSuccess }: LoginFormProps) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login, isLoading, error, isAdmin } = useAuthStore();
+  const { login, isLoading, error, isAdmin, isHR, isManagement } = useAuthStore();
   const navigate = useNavigate();
   const { toast } = useToast();
   
@@ -21,10 +21,11 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
     try {
       await login(email, password);
       
-      // Check if admin login
-      if (isAdmin()) {
+      // Check if admin, HR, or management login
+      if (isAdmin() || isHR() || isManagement()) {
+        const userType = isAdmin() ? "Admin" : isHR() ? "HR" : "Management";
         toast({
-          title: "Admin Login Successful",
+          title: `${userType} Login Successful`,
           description: "Welcome to the admin dashboard",
           variant: "default",
         });
