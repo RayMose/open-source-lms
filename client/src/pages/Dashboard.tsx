@@ -9,7 +9,6 @@ import ProgressBar from '@/components/ui/ProgressBar';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import LecturerDashboard from '@/pages/dashboards/LecturerDashboard';
-import HRDashboard from '@/pages/dashboards/HRDashboard';
 import ManagementDashboard from '@/pages/dashboards/ManagementDashboard';
 import DiplomatDashboard from '@/pages/dashboards/DiplomatDashboard';
 
@@ -54,21 +53,7 @@ const Dashboard = () => {
     );
   }
 
-  if (isHR()) {
-    return (
-      <div className="min-h-screen flex flex-col bg-background">
-        <Header />
-        <main className="flex-grow pt-20 pb-12">
-          <div className="container mx-auto px-4 md:px-6 animate-fade-in">
-            <HRDashboard />
-          </div>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (isManagement() || isAdmin()) {
+  if (isHR() || isManagement() || isAdmin()) {
     return (
       <div className="min-h-screen flex flex-col bg-background">
         <Header />
